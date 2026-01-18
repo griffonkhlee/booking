@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://timl-ec.github.io/vehiclebooking/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="https://timl-ec.github.io/vehiclebooking/FAVICON/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="https://timl-ec.github.io/vehiclebooking/FAVICON/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://timl-ec.github.io/vehiclebooking/FAVICON/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://timl-ec.github.io/vehiclebooking/FAVICON/favicon-16x16.png">
+<link rel="manifest" href="https://timl-ec.github.io/vehiclebooking/FAVICON/site.webmanifest">
+
+     <title>系統主頁</title>   
+    <style>
+        /* ver.20251006.01 */
+        /* 整体页面字体设置 */
+        body {
+            font-family: 'LXGW WenKai Mono TC', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* 标题样式设置 */
+        h1 {
+            font-size: 45px;  /* 标题字体大小改为45px */
+            font-weight: bold;
+            text-decoration: underline;
+            text-align: center;  /* 标题文字居中 */
+            width: 100%;  /* 标题宽度占满 */
+        }
+
+        /* 按钮样式设置 */
+        .center-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;  /* 容器宽度占满 */
+        }
+
+        button {
+            font-size: 30px;
+            padding: 20px 30px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            transition: background-color 0.3s;
+            width: 80%;  /* 按钮宽度设置为80%，可根据需要调整 */
+            max-width: 300px;  /* 最大宽度限制 */
+        }
+
+        button:hover {
+            background-color: #ff5722;
+        }
+
+        /* 响应式设计，当屏幕宽度小于600px时，调整字体大小和按钮宽度 */
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+            button {
+                font-size: 20px;
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center-container">
+        <h1>觀景山工程部車輛預約系統主頁</h1>
+        <button onclick="window.location.href=&#39;https://timl-ec.github.io/vehiclebooking/apply.html&#39;">申請預約</button>
+        <button onclick="window.location.href=&#39;https://timl-ec.github.io/vehiclebooking/cancel.html&#39;">取消預約</button>
+        <button onclick="window.location.href=&#39;https://timl-ec.github.io/vehiclebooking/status.html&#39;">預約狀態</button>
+        <button onclick="window.location.href=&#39;https://timl-ec.github.io/vehiclebooking/key.html&#39;">用車現況</button>
+        <button onclick="window.open(&#39;https://timl-ec.github.io/vehiclebooking/guide.html&#39;, &#39;_blank&#39;)">使用指南</button>
+
+        <!-- QR Code 區塊：顯示本頁網址 -->
+        <div id="qrcode" style="margin-top:16px;"></div>
+
+        <!-- 載入 QRCode.js 與初始化本頁網址 QR -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+        <script>
+          (function(){
+            var el = document.getElementById('qrcode');
+            if (el && window && window.location && window.location.href) {
+              new QRCode(el, {
+                text: window.location.href,
+                width: 180,
+                height: 180,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.M
+              });
+            }
+          })();
+        </script>
+    </div>
+
+
+
+
+
+
+
+
+
+</body></html>
